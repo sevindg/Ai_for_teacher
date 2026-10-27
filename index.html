@@ -88,6 +88,9 @@ p.lead{font-size:clamp(16px,1.35vw,20px);line-height:1.55;color:var(--ink-2);mar
 .nets{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:14px}
 .net{display:flex;flex-direction:column;gap:10px;padding:18px;border-radius:var(--r-lg);background:var(--bg-soft);border:1px solid var(--line)}
 .net img{height:46px;width:auto;max-width:100%;object-fit:contain;object-position:left center}
+
+
+
 /* позиционирование: ИИ — помощник, а не замена */
 .pos{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:28px;align-items:center}
 .pos .roles{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px}
@@ -96,6 +99,20 @@ p.lead{font-size:clamp(16px,1.35vw,20px);line-height:1.55;color:var(--ink-2);mar
 .pos .teacher{background:var(--brand);border-color:var(--brand);color:#fff}
 .pos .teacher .card-t{color:#fff}.pos .teacher .who{color:#DDE1FC}.pos .teacher ul{color:#EBEEFD}
 .pos .motto{font:600 clamp(20px,2vw,24px)/1.4 var(--f);color:var(--brand-dark);margin:18px 0 0}
+/* слайд «Атлас возможностей» — как первый экран atlas.rebotica.ru */
+.atlas{display:flex;flex-direction:column;gap:24px}
+.atlas-main{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,.9fr);gap:48px;align-items:center}
+.atlas .kicker{font:600 14px var(--f);letter-spacing:.06em;text-transform:uppercase;color:var(--brand);margin-bottom:14px}
+.atlas h1.t{font-size:clamp(30px,3.4vw,52px);margin-bottom:18px}
+.atlas .lead{margin-bottom:16px}
+.atlas-note{display:flex;gap:12px;align-items:flex-start;margin:0 0 24px;font:600 clamp(16px,1.3vw,19px)/1.45 var(--f);color:var(--brand-dark)}
+.atlas-note span{flex:none;font-weight:700}
+.atlas-stats{background:var(--card);border:1px solid var(--line-strong);border-radius:var(--r-xl);box-shadow:var(--shadow);padding:10px 30px}
+.atlas-stat{padding:22px 0}
+.atlas-stat+.atlas-stat{border-top:1px solid var(--line)}
+.atlas-stat b{display:block;font:800 clamp(36px,3.6vw,54px)/1.05 var(--f);color:var(--brand);letter-spacing:-.01em}
+.atlas-stat p{margin:8px 0 0;font-size:17px;line-height:1.5;color:var(--ink-2)}
+.atlas-mission{margin:0;padding-top:22px;border-top:1px solid var(--line-strong);font:600 clamp(18px,1.6vw,23px)/1.45 var(--f);color:var(--ink);max-width:62ch}
 .cover h1.t{font-size:clamp(40px,5.4vw,80px);margin:12px 0 16px}
 .cover .tags{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
 .cover .tags .chip{font-size:14px;padding:9px 14px}
@@ -258,7 +275,7 @@ p.lead{font-size:clamp(16px,1.35vw,20px);line-height:1.55;color:var(--ink-2);mar
   .split,.sec,.cover,.quiz,.gp{grid-template-columns:minmax(0,1fr)}
   #bar .lbl{display:none}
   .nets{grid-template-columns:minmax(0,1fr)}
-  .pos,.pos .roles{grid-template-columns:minmax(0,1fr)}
+  .pos,.pos .roles,.atlas-main{grid-template-columns:minmax(0,1fr)}
 }
 @media (max-width:560px){
   .g2,.g3,.g4,.g5,.agenda,.rules,.flow{grid-template-columns:minmax(0,1fr)}
@@ -558,7 +575,15 @@ const SLIDES = [
       <p class="lead">Соберём полный пакет материалов к уроку с помощью нейросетей — по шаблонам, которые вы заберёте с собой.</p>
       <div class="tags"><span class="chip">🧭 Формула промта</span><span class="chip">📋 Технологическая карта</span><span class="chip">📝 Дидактика под ФГОС</span><span class="chip">🖼️ Картинки</span><span class="chip">🛡️ Безопасность</span></div></div>
       <div class="illu">${img('cover', 'Учитель у экрана и робот-помощник')}</div></div>` },
-
+  { tag: 'Атлас возможностей', title: '«Атлас возможностей» — это диагностические инструменты', own: true,
+    html: () => `<div class="atlas"><div class="atlas-main"><div>
+        <div class="kicker">Федеральный образовательный проект</div>
+        <h1 class="t">«Атлас возможностей» — это диагностические инструменты, которые школа предоставляет родителям</h1>
+        <p class="lead">Персональные отчеты о темпераменте, мотивации, способностях ребенка и подходящих направлениях развития в экономике и IT.</p>
+        <p class="atlas-note"><span aria-hidden="true">✓</span>Школа при этом не несет никакой нагрузки — только информирует родителей.</p>
+        <a class="btn" href="https://atlas.rebotica.ru/#tools" target="_blank" rel="noopener">Посмотреть инструменты</a></div>
+      <div class="atlas-stats">${[['27 700+', 'родителей школьников из 67 регионов уже приняли участие'], ['36 671', 'IT-проект выполнен школьниками после диагностики'], ['67', 'регионов России — федеральный уровень проекта']].map(([n, d]) => `<div class="atlas-stat"><b>${n}</b><p>${d}</p></div>`).join('')}</div></div>
+      <p class="atlas-mission">Наша миссия — помочь родителям и школам найти лучший путь развития для каждого ребенка с учетом его способностей и особенностей.</p></div>` },
   { tag: 'Позиция', title: 'ИИ — помощник, а не замена учителя',
     html: () => `<div class="pos"><div><div class="roles">
         <div class="card"><div class="who">ИИ-помощник</div><div class="card-t" style="margin-top:6px">Берёт на себя рутину</div><ul><li>черновик технологической карты</li><li>задания в нескольких уровнях</li><li>варианты проверочной и ключи</li><li>картинки и наглядность</li></ul></div>
