@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>ИИ — ассистент учителя · воркшоп</title>
+<title>ИИ — ассистент учителя · мастер-класс</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700;800&display=swap">
@@ -99,7 +99,7 @@ p.lead{font-size:clamp(16px,1.35vw,20px);line-height:1.55;color:var(--ink-2);mar
 .cover .tags{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
 .cover .tags .chip{font-size:14px;padding:9px 14px}
 
-/* план воркшопа */
+/* план мастер-класса */
 .agenda{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
 .ag{display:flex;gap:14px;align-items:flex-start}
 .ag .n{flex:none;width:44px;height:44px;border-radius:10px;display:grid;place-items:center;font:800 17px var(--f);color:#fff;background:var(--c,var(--brand))}
@@ -108,7 +108,7 @@ p.lead{font-size:clamp(16px,1.35vw,20px);line-height:1.55;color:var(--ink-2);mar
 .gifts-teaser b{display:block;font:800 21px var(--f)}
 .gifts-teaser span{font-size:16px;color:#DDE1FC}
 
-/* промпт */
+/* промт */
 .pbox{background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow-sm);overflow:hidden;display:flex;flex-direction:column;min-width:0}
 .pbox-h{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:12px 14px;border-bottom:1px solid var(--line);background:var(--card-2)}
 .pbox-h .lbl{font:800 13px var(--f);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);margin-right:auto}
@@ -263,7 +263,7 @@ p.lead{font-size:clamp(16px,1.35vw,20px);line-height:1.55;color:var(--ink-2);mar
   </nav>
 </div>
 <div id="lb" hidden><img alt=""><span></span></div>
-<div id="ovGrid" class="ov" hidden><div class="ov-card"><div class="ov-head"><h2>Все слайды воркшопа</h2><button class="btn ghost sm" data-close>Закрыть</button></div><div class="ov-body"><div class="thumbs" id="thumbs"></div></div></div></div>
+<div id="ovGrid" class="ov" hidden><div class="ov-card"><div class="ov-head"><h2>Все слайды мастер-класса</h2><button class="btn ghost sm" data-close>Закрыть</button></div><div class="ov-body"><div class="thumbs" id="thumbs"></div></div></div></div>
 
 <script>
 const LOGO = "data:image/png;base64,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";
@@ -280,7 +280,7 @@ const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;',
 let toastT;
 function toast(msg) { let t = $('.toast'); if (!t) { t = document.createElement('div'); t.className = 'toast'; document.body.appendChild(t); } t.textContent = msg; t.hidden = false; clearTimeout(toastT); toastT = setTimeout(() => t.hidden = true, 2000); }
 
-/* ===================== ПРОМПТЫ =====================
+/* ===================== ПРОМТЫ =====================
    В шаблонах [квадратные скобки] — то, что меняет учитель.
    В готовых примерах [[двойные скобки]] — текст, вставленный вместо шаблона (подсвечивается). */
 const P = {
@@ -443,7 +443,7 @@ function fmtPrompt(src, isTemplate) {
   return h.replace(/\[\[([\s\S]*?)\]\]/g, '<mark>$1</mark>');
 }
 
-/* блок промпта: вкладки «Шаблон / Готовый пример» + кнопка «Скопировать» */
+/* блок промта: вкладки «Шаблон / Готовый пример» + кнопка «Скопировать» */
 function promptBox(label, tabs, opt = {}) {
   const id = 'pb' + Math.random().toString(36).slice(2, 8);
   const hasMark = tabs.some(t => /\[\[/.test(P[t.k])), hasSlot = tabs.some(t => t.tpl);
@@ -469,7 +469,7 @@ document.addEventListener('click', e => {
   if (cp) copyText(plain(P[cp.dataset.copy]), cp);
 });
 function copyText(text, btn) {
-  const ok = () => { btn.classList.add('done'); btn.textContent = '✓ СКОПИРОВАНО'; toast('Промпт скопирован — вставьте его в чат (Ctrl+V)'); setTimeout(() => { btn.classList.remove('done'); btn.textContent = '⧉ СКОПИРОВАТЬ'; }, 2200); };
+  const ok = () => { btn.classList.add('done'); btn.textContent = '✓ СКОПИРОВАНО'; toast('Промт скопирован — вставьте его в чат (Ctrl+V)'); setTimeout(() => { btn.classList.remove('done'); btn.textContent = '⧉ СКОПИРОВАТЬ'; }, 2200); };
   const fallback = () => { const ta = document.createElement('textarea'); ta.value = text; ta.style.cssText = 'position:fixed;opacity:0'; document.body.appendChild(ta); ta.select(); try { document.execCommand('copy'); ok(); } catch (e) { toast('Не удалось скопировать'); } ta.remove(); };
   if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(text).then(ok, fallback); else fallback();
 }
@@ -533,10 +533,10 @@ const RULES5 = [
   ['r5', 'Ответственность — на учителе', 'Финальную версию урока и материалов делает учитель.']];
 
 const SLIDES = [
-  { tag: 'Воркшоп', title: 'ИИ — ассистент учителя', own: true,
-    html: () => `<div class="cover"><div><div class="kicker">Воркшоп для учителей</div><h1 class="t">ИИ — ассистент учителя</h1>
+  { tag: 'Мастер-класс', title: 'ИИ — ассистент учителя', own: true,
+    html: () => `<div class="cover"><div><div class="kicker">Мастер-класс для учителей</div><h1 class="t">ИИ — ассистент учителя</h1>
       <p class="lead">Соберём полный пакет материалов к уроку с помощью нейросетей — по шаблонам, которые вы заберёте с собой.</p>
-      <div class="tags"><span class="chip">🧭 Формула промпта</span><span class="chip">📋 Технологическая карта</span><span class="chip">📝 Дидактика под ФГОС</span><span class="chip">🖼️ Картинки</span><span class="chip">🛡️ Безопасность</span></div></div>
+      <div class="tags"><span class="chip">🧭 Формула промта</span><span class="chip">📋 Технологическая карта</span><span class="chip">📝 Дидактика под ФГОС</span><span class="chip">🖼️ Картинки</span><span class="chip">🛡️ Безопасность</span></div></div>
       <div class="illu">${img('cover', 'Учитель у экрана и робот-помощник')}</div></div>` },
 
   { tag: 'Позиция', title: 'ИИ — помощник, а не замена учителя',
@@ -546,9 +546,9 @@ const SLIDES = [
         <p class="motto">ИИ дополняет работу учителя, а не заменяет её.</p></div>
       <div class="illu"><img src="${IMG.pos}" alt="Учитель и робот-помощник с книгами" width="1400" height="781"></div></div>` },
 
-  { tag: 'План', title: 'Что разберём на воркшопе',
+  { tag: 'План', title: 'Что разберём на мастер-классе',
     html: () => `<div class="agenda">${[
-      ['0', 'ИИ — ваш ассистент, а не замена', 'Формула хорошего промпта', 'var(--brand)'],
+      ['0', 'ИИ — ваш ассистент, а не замена', 'Формула хорошего промта', 'var(--brand)'],
       ['1', 'Основа урока за 15 минут', 'Технологическая карта по учебнику в формате эталона', 'var(--brand)'],
       ['2', 'Дидактика под ФГОС', 'Рабочий лист, проверочная и ДЗ в трёх уровнях', 'var(--brand)'],
       ['3', 'Картинки и инфографика', 'Генерация и «оживление» картинок', 'var(--brand)'],
@@ -563,11 +563,11 @@ const SLIDES = [
       <div class="card"><div class="card-t">Нейросети, с которыми работаем</div><div class="nets">${[['giga', 'GigaChat', 'giga.chat'], ['alice', 'Алиса AI', 'alice.yandex.ru'], ['qwen', 'Qwen', 'chat.qwen.ai — запасной вариант для картинок']].map(([k, n, d]) => `<div class="net"><img src="${IMG[k]}" alt="${n}"><p class="card-d">${d}</p></div>`).join('')}</div></div>` },
 
   /* ---------- Блок 0 ---------- */
-  section('Блок 0', 'ИИ — ваш ассистент, а не замена', 'Показать формулу хорошего промпта и разницу между коротким запросом и запросом по формуле.', '«Я пробовала, а ИИ выдаёт ерунду» + страх перед ИИ.', img('b0', 'Робот-помощник подаёт учителю кофе и готовит материалы')),
+  section('Блок 0', 'ИИ — ассистент, а не педагог', 'Показать формулу хорошего промта и разницу между коротким запросом и запросом по формуле.', '«Я пробовала, а ИИ выдаёт ерунду» + страх перед ИИ.', img('b0', 'Робот-помощник подаёт учителю кофе и готовит материалы')),
 
-  { tag: 'Блок 0 · Формула', title: 'Промпт — это техническое задание', lead: 'Нажмите на часть формулы — в примере подсветится, как она записана.',
+  { tag: 'Блок 0 · Формула', title: 'Промт — это техническое задание', lead: 'Нажмите на часть формулы — в примере подсветится, как она записана.',
     html: () => `<div class="formula">${FORMULA.map((f, i) => `${i ? '<span class="plus">+</span>' : ''}<button class="fpart" style="--fc:${f.c}" data-f="${f.k}" aria-pressed="false">${f.n}</button>`).join('')}</div>
-      <div class="fexpl" data-fx>Хороший промпт состоит из пяти частей.</div>
+      <div class="fexpl" data-fx>Хороший промт состоит из пяти частей.</div>
       <div class="pbox"><div class="pbox-h"><span class="lbl">ПРОМТ — готовый пример («хорошо»)</span><button class="copy" data-copy="good">⧉ СКОПИРОВАТЬ</button></div>
       <pre class="ptext">${FORMULA.map(f => `<span class="seg" data-s="${f.k}" style="--fc:${f.c}">${esc(f.seg)}</span>`).join(' ')}</pre></div>`,
     mount(el) {
@@ -576,7 +576,7 @@ const SLIDES = [
         const f = FORMULA.find(x => x.k === b.dataset.f), on = b.getAttribute('aria-pressed') !== 'true';
         $$('.fpart', el).forEach(x => x.setAttribute('aria-pressed', on && x === b));
         $$('.seg', el).forEach(s => s.classList.toggle('on', on && s.dataset.s === f.k));
-        $('[data-fx]', el).innerHTML = on ? `<b>${f.n}</b> — ${esc(f.d)}` : 'Хороший промпт состоит из пяти частей.';
+        $('[data-fx]', el).innerHTML = on ? `<b>${f.n}</b> — ${esc(f.d)}` : 'Хороший промт состоит из пяти частей.';
       });
     } },
 
@@ -594,9 +594,9 @@ const SLIDES = [
   section('Блок 1', 'Основа урока за 15 минут', 'Получить технологическую карту по учебнику в формате школьного эталона и сохранить её в документ.', 'Огромные затраты времени на подготовку к урокам.', emojiArt(['📘', '⏱️', '📋', '✍️', '🔍', '✅'])),
 
   { tag: 'Блок 1 · Алгоритм', title: 'Алгоритм одинаковый для любой нейросети',
-    html: () => `<div class="flow">${[['🧩', 't-cream', 'Определяем, что нужно'], ['✍️', 't-blue', 'Пишем промпт по формуле'], ['📨', 't-sage', 'Отправляем'], ['🔍', 't-coral', 'Проверяем'], ['🛠️', 't-cream', 'Дорабатываем под свой класс']].map(([i, t, b]) => `<div class="fs"><div class="ico ${t}">${i}</div><b>${b}</b></div>`).join('')}</div>
+    html: () => `<div class="flow">${[['🧩', 't-cream', 'Определяем, что нужно'], ['✍️', 't-blue', 'Пишем промт по формуле'], ['📨', 't-sage', 'Отправляем'], ['🔍', 't-coral', 'Проверяем'], ['🛠️', 't-cream', 'Дорабатываем под свой класс']].map(([i, t, b]) => `<div class="fs"><div class="ico ${t}">${i}</div><b>${b}</b></div>`).join('')}</div>
       <div class="split"><div class="body"><div class="card"><div class="ico t-blue">📎</div><div class="card-t">Источники в GigaChat</div><p class="card-d">Добавьте ссылку или скриншоты страниц учебника — и технологическая карта будет построена по ним, а не «из головы» нейросети.</p></div>
-      <div class="card"><div class="ico t-sage">📐</div><div class="card-t">Эталон формата</div><p class="card-d">В промпте задаём структуру школьной технологической карты: шапка с целью и задачами, таблица этапов, УУД.</p></div></div>
+      <div class="card"><div class="ico t-sage">📐</div><div class="card-t">Эталон формата</div><p class="card-d">В промте задаём структуру школьной технологической карты: шапка с целью и задачами, таблица этапов, УУД.</p></div></div>
       ${shots([['p09_1', 'Пример технологической карты — эталон формата']], '40vh')}</div>` },
 
   { tag: 'Блок 1 · Шаг 1', title: 'Подключаем учебник как источник', lead: 'Нажимайте на шаги по ходу работы — они будут отмечаться.',
@@ -609,16 +609,16 @@ const SLIDES = [
       <div class="body">${shots([['p09_2', 'GigaChat: раздел «Проекты» в меню слева'], ['p10_1', '«Создать» → «Документ»'], ['p11_1', '«Использовать источники» → значок настройки'], ['p11_2', '«Параметры источников»: перетащите файл или вставьте ссылку'], ['p12_1', 'Страницы учебника загружены → «Сохранить»'], ['p12_2', 'Многоточие у файла → «Как использовать источник»'], ['p12_3', 'Оба тумблера включены: «Взять отсюда информацию» и «Копировать стиль текста»']], '46vh')}
       <div class="card" style="background:var(--warn-l);border-color:#F0D3CC;padding:14px 18px"><div class="card-t">⚠️ Только учебные материалы</div><p class="card-d">В источники — страницы учебника и ссылки. Никаких фото журналов и списков класса.</p></div></div></div>` },
 
-  { tag: 'Блок 1 · Шаг 2', title: 'Промпт «Технологическая карта урока»', lead: 'Формат — как в эталоне. Ответ приходит за 1–2 минуты.',
+  { tag: 'Блок 1 · Шаг 2', title: 'Промт «Технологическая карта урока»', lead: 'Формат — как в эталоне. Ответ приходит за 1–2 минуты.',
     html: () => `<div class="split" style="grid-template-columns:minmax(0,1.5fr) minmax(0,.5fr)">${promptBox('технологическая карта урока', [{ name: 'Готовый пример', k: 'tkE' }, { name: 'Шаблон', k: 'tkT', tpl: true }], { max: '52vh' })}
-      ${shots([['p13_1', 'Вставляем промпт в поле слева и нажимаем «Написать текст»']], '40vh')}</div>` },
+      ${shots([['p13_1', 'Вставляем промт в поле слева и нажимаем «Написать текст»']], '40vh')}</div>` },
 
   { tag: 'Блок 1 · Шаг 3', title: 'Сохраняем карту в документ',
     html: () => `<div class="split">${steps([
       ['«Файл»', 'Кнопка в верхней части экрана.'],
       ['«Экспорт как DOCX»', 'Выберите из выпадающего списка.'],
       ['«На устройство»', 'Файл сохранится на компьютер.'],
-      ['Папка на рабочем столе', 'Например, «Воркшоп — результаты» → «Сохранить».']], { click: true })}
+      ['Папка на рабочем столе', 'Например, «Мастер-класс — результаты» → «Сохранить».']], { click: true })}
       <div class="body">${shots([['p16_1', '«Файл» в верхней части экрана'], ['p16_2', '«Экспорт как DOCX»'], ['p17_1', '«На устройство»'], ['p17_2', 'Выбираем папку на рабочем столе'], ['p17_3', 'Готовая технологическая карта открыта в Word']], '44vh')}
       <div class="card" style="background:var(--tint);border-color:var(--line-strong);padding:14px 18px"><div class="card-t">💾 Это обязательный шаг</div><p class="card-d">Без сохранения результат неудобно править и передавать дальше.</p></div></div></div>` },
 
@@ -633,7 +633,7 @@ const SLIDES = [
       <div class="card" style="background:var(--tint);border-color:var(--line-strong)"><div class="ico" style="background:#fff">📋</div><div class="card-t">Технологическая карта от ИИ — это основа</div><p class="card-d">ИИ не знает ваш класс и может перепутать программу. Сверяем этапы и содержание с УМК и рабочей программой. Финальную версию делает учитель.</p></div></div>` },
 
   /* ---------- Блок 2 ---------- */
-  section('Блок 2', 'Дидактика под ФГОС через промпты-шаблоны', 'По шаблонам получить рабочий лист в трёх уровнях, проверочную работу в двух вариантах и дифференцированное ДЗ, затем проверить материал.', 'Сложно адаптировать материалы под ФГОС и делать качественную дидактику, особенно в нескольких уровнях.', emojiArt(['📝', '🧮', '🏠', '●', '●●', '●●●'])),
+  section('Блок 2', 'Дидактика под ФГОС через промты-шаблоны', 'По шаблонам получить рабочий лист в трёх уровнях, проверочную работу в двух вариантах и дифференцированное ДЗ, затем проверить материал.', 'Сложно адаптировать материалы под ФГОС и делать качественную дидактику, особенно в нескольких уровнях.', emojiArt(['📝', '🧮', '🏠', '●', '●●', '●●●'])),
 
   { tag: 'Блок 2 · Важно', title: 'Сохраняйте каждый ответ в «Блокнот»',
     html: () => `<div class="split"><div class="body">${steps([
@@ -641,22 +641,22 @@ const SLIDES = [
       ['Или выделите нужную часть', 'Выделите фрагмент ответа и нажмите «Сохранить в блокноте».'],
       ['Все материалы — в «Блокноте»', 'Раздел в левой части экрана.'],
       ['«Проекты» → документ', 'Сохранённые ответы собираются в документ, который можно скачать на компьютер.']], { click: true })}
-      <div class="card" style="padding:14px 18px"><div class="card-t">🔁 Шаблон = промпт с [окошками]</div><p class="card-d">Меняете только то, что в квадратных скобках: предмет, класс, тему. Уровни сложности, баллы, ключи и планируемые результаты по ФГОС уже прописаны.</p></div></div>
+      <div class="card" style="padding:14px 18px"><div class="card-t">🔁 Шаблон = промт с [окошками]</div><p class="card-d">Меняете только то, что в квадратных скобках: предмет, класс, тему. Уровни сложности, баллы, ключи и планируемые результаты по ФГОС уже прописаны.</p></div></div>
       ${shots([['p19_1', 'Кнопка «Сохранить в блокноте» внизу ответа'], ['p20_1', 'Выделенный фрагмент → «Сохранить в блокноте»'], ['p20_2', 'Раздел «Блокнот» в левой части экрана']], '44vh')}</div>` },
 
-  { tag: 'Блок 2 · Шаг 1', title: 'Промпт «Рабочий лист»', lead: 'В том же чате. Если ИИ задал уточняющие вопросы — ответьте коротко одним сообщением.',
+  { tag: 'Блок 2 · Шаг 1', title: 'Промт «Рабочий лист»', lead: 'В том же чате. Если ИИ задал уточняющие вопросы — ответьте коротко одним сообщением.',
     html: () => `<div class="split" style="grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr)">${promptBox('рабочий лист', [{ name: 'Готовый пример', k: 'wsE' }, { name: 'Шаблон', k: 'wsT', tpl: true }], { max: '54vh' })}
       ${shots([['p23_1', 'Готовый рабочий лист в документе GigaChat']], '50vh')}</div>` },
 
-  { tag: 'Блок 2 · Шаг 2', title: 'Промпт «Проверочная работа»', lead: 'Два варианта с ключами и шкалой перевода в отметку.',
+  { tag: 'Блок 2 · Шаг 2', title: 'Промт «Проверочная работа»', lead: 'Два варианта с ключами и шкалой перевода в отметку.',
     html: () => `<div class="split" style="grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr)">${promptBox('проверочная работа / тест', [{ name: 'Готовый пример', k: 'testE' }, { name: 'Шаблон', k: 'testT', tpl: true }], { max: '54vh' })}
-      ${shots([['p25_1', 'Промпт отправлен в тот же чат'], ['p26_1', 'Готовая проверочная работа']], '50vh')}</div>` },
+      ${shots([['p25_1', 'Промт отправлен в тот же чат'], ['p26_1', 'Готовая проверочная работа']], '50vh')}</div>` },
 
-  { tag: 'Блок 2 · Шаг 3', title: 'Промпт «Дифференцированное ДЗ»', lead: 'Три уровня — ученик выбирает уровень сам.',
+  { tag: 'Блок 2 · Шаг 3', title: 'Промт «Дифференцированное ДЗ»', lead: 'Три уровня — ученик выбирает уровень сам.',
     html: () => `<div class="split" style="grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr)">${promptBox('дифференцированное домашнее задание', [{ name: 'Готовый пример', k: 'hwE' }, { name: 'Шаблон', k: 'hwT', tpl: true }], { max: '54vh' })}
-      ${shots([['p27_1', 'Промпт отправлен в тот же чат']], '50vh')}</div>` },
+      ${shots([['p27_1', 'Промт отправлен в тот же чат']], '50vh')}</div>` },
 
-  { tag: 'Блок 2 · Шаг 4', title: 'Проверку ИИ тоже проверяем', lead: 'Реальные ошибки ИИ при подготовке воркшопа — нажмите на карточку.',
+  { tag: 'Блок 2 · Шаг 4', title: 'Проверку ИИ тоже проверяем', lead: 'Реальные ошибки ИИ при подготовке мастер-класса — нажмите на карточку.',
     html: () => `<div class="grid g3">${[
       ['🧮', 'Максимум баллов', '17 баллов вместо 12', 'Сумма баллов за задания должна совпадать с максимумом и шкалой отметок.'],
       ['🕷️', 'Факт в задаче', '«У паука 6 лапок»', 'У паука 8 ног. Факты в задачах из жизни проверяем.'],
@@ -676,16 +676,16 @@ const SLIDES = [
       all.onclick = () => { const on = all.getAttribute('aria-pressed') !== 'true'; all.setAttribute('aria-pressed', on); pic.src = on ? IMG.ph4 : IMG.ph; all.textContent = on ? 'Крупно картинку с ошибкой' : 'Все 4 варианта'; };
     } },
 
-  { tag: 'Блок 3 · Шаблон', title: 'Шаблон промпта для картинок', lead: 'Роль + Задача + Контекст + Стиль + Формат.',
+  { tag: 'Блок 3 · Шаблон', title: 'Шаблон промта для картинок', lead: 'Роль + Задача + Контекст + Стиль + Формат.',
     html: () => `<div class="split" style="grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr)">${promptBox('картинка', [{ name: 'Пример: Знайка', k: 'img1' }, { name: 'Пример: белый фон', k: 'img2' }, { name: 'Шаблон', k: 'imgT', tpl: true }])}
       <div class="body">${[['Роль', 'специалистом в какой области выступает нейросеть'], ['Задача', 'что нужно нарисовать'], ['Контекст', 'что именно и в каком виде вы хотите получить'], ['Стиль', 'минимализм, абстрактный, реалистичный, импрессионизм'], ['Формат', 'горизонтальный / вертикальный, размер']].map(([h, d]) => `<div class="card" style="padding:12px 16px"><div class="card-t" style="margin:0">${h}</div><p class="card-d">${d}</p></div>`).join('')}</div></div>` },
 
   { tag: 'Блок 3 · Алиса', title: 'Рисуем персонажа в Алисе',
     html: () => `<div class="split">${steps([
         ['Новый чат в Алисе (или Qwen)', ''],
-        ['Плюсик → «Нарисовать картинку»', 'Вставьте промпт по шаблону и отправьте.'],
+        ['Плюсик → «Нарисовать картинку»', 'Вставьте промт по шаблону и отправьте.'],
         ['Попросите несколько вариантов', 'Например, Знайка на белом фоне — выберите лучший.'],
-        ['Не получилось?', 'Упростите промпт или отправьте его в другую нейросеть (Qwen).']], { click: true })}
+        ['Не получилось?', 'Упростите промт или отправьте его в другую нейросеть (Qwen).']], { click: true })}
       ${shots([['p31_1', 'Плюсик → «Нарисовать картинку»'], ['p32_1', 'Результат: Знайка у книжных полок'], ['p33_1', 'Несколько вариантов на белом фоне — выбираем лучший']], '50vh')}</div>` },
 
   { tag: 'Блок 3 · Алиса', title: '«Оживляем» персонажа',
@@ -697,7 +697,7 @@ const SLIDES = [
       ${shots([['p34_1', '«Студия» → «Оживить видео» → «Оживить»'], ['p34_2', 'Загружаем картинку с персонажем'], ['p34_3', 'Описываем, что должен сделать персонаж'], ['p35_1', 'Результат: «Девочка улыбается и машет рукой»'], ['p35_2', 'Результат: «Девочка плачет»']], '50vh')}</div>` },
 
   { tag: 'Блок 3 · Проверка', title: 'Проверяем каждую картинку',
-    html: () => `<div class="split"><div>${checklist(['Количество предметов совпадает с промптом', 'На картинке нет текста и случайных букв', 'Действие и детали — как задумано', 'Подписи добавлены вручную'])}</div>
+    html: () => `<div class="split"><div>${checklist(['Количество предметов совпадает с промтом', 'На картинке нет текста и случайных букв', 'Действие и детали — как задумано', 'Подписи добавлены вручную'])}</div>
       <div class="body"><div class="card" style="background:var(--warn-l);border-color:#F0D3CC"><div class="ico" style="background:#fff">📷</div><div class="card-t">Фото учеников в нейросеть не загружаем</div><p class="card-d">Для «оживления» используем только сгенерированных персонажей.</p></div>
       <div class="card"><div class="ico t-blue">🔢</div><div class="card-t">ИИ часто ошибается в количестве и буквах</div><p class="card-d">Пересчитываем предметы и проверяем подписи.</p></div></div></div>` },
 
@@ -708,13 +708,13 @@ const SLIDES = [
     html: () => `<div class="rules">${RULES5.map(([k, h, d], i) => `<div class="rule">${img(k, h)}<div class="rb"><div class="rn">ПРАВИЛО ${i + 1}</div><b>${h}</b><p>${d}</p></div></div>`).join('')}</div>` },
 
   /* ---------- Итоги ---------- */
-  { tag: 'Итоги', title: 'Ваш ИИ-набор учителя', lead: 'За один воркшоп — полный пакет к уроку по одной теме. Меняете тему в [скобках] — и получаете то же самое для любого урока.',
-    html: () => `<div class="grid g3">${[['📋', 't-blue', 'Технологическая карта', 'в формате DOCX'], ['📝', 't-sage', 'Рабочий лист', 'в трёх уровнях'], ['🧮', 't-coral', 'Проверочная работа', 'два варианта с ключами'], ['🏠', 't-cream', 'Дифференцированное ДЗ', 'три уровня на выбор'], ['🖼️', 't-blue', 'Картинка', 'по шаблону промпта'], ['🎬', 't-sage', 'Оживлённый персонаж', 'короткое видео']].map(([i, t, h, d]) => `<div class="card"><div class="ico ${t}">${i}</div><div class="card-t">${h}</div><p class="card-d">${d}</p></div>`).join('')}</div>
+  { tag: 'Итоги', title: 'Ваш ИИ-набор учителя', lead: 'За один мастер-класс — полный пакет к уроку по одной теме. Меняете тему в [скобках] — и получаете то же самое для любого урока.',
+    html: () => `<div class="grid g3">${[['📋', 't-blue', 'Технологическая карта', 'в формате DOCX'], ['📝', 't-sage', 'Рабочий лист', 'в трёх уровнях'], ['🧮', 't-coral', 'Проверочная работа', 'два варианта с ключами'], ['🏠', 't-cream', 'Дифференцированное ДЗ', 'три уровня на выбор'], ['🖼️', 't-blue', 'Картинка', 'по шаблону промта'], ['🎬', 't-sage', 'Оживлённый персонаж', 'короткое видео']].map(([i, t, h, d]) => `<div class="card"><div class="ico ${t}">${i}</div><div class="card-t">${h}</div><p class="card-d">${d}</p></div>`).join('')}</div>
       <div class="card" style="background:var(--tint);border-color:var(--line-strong);text-align:center"><div class="card-t" style="margin:0;font-size:22px">ИИ — ассистент, а учитель — автор урока</div></div>` },
 
   { tag: 'Итоги · Памятка', title: 'Алгоритм для любого урока',
     html: () => steps([
-      ['Технологическая карта', 'GigaChat → «Проекты» → «Создать» → «Документ» → «Использовать источники» (страницы учебника, оба тумблера включены) → промпт «Технологическая карта».'],
+      ['Технологическая карта', 'GigaChat → «Проекты» → «Создать» → «Документ» → «Использовать источники» (страницы учебника, оба тумблера включены) → промт «Технологическая карта».'],
       ['Сохранение', '«Файл» → «Экспорт как DOCX» → «На устройство» → папка на рабочем столе.'],
       ['Дидактика', 'Рабочий лист, проверочная, ДЗ — в том же чате; каждый ответ — «Сохранить в блокноте».'],
       ['Проверка', 'Пересчитываем ключи и баллы, сверяем с учебником.'],
@@ -727,18 +727,18 @@ const SLIDES = [
       ['🧮', 'Не пересчитали баллы', 'Сумма баллов за задания должна совпадать с максимумом и шкалой отметок.'],
       ['📚', 'Задания на ещё не изученное', 'Например, задача на деление с остатком на уроке по таблице.'],
       ['🔤', 'Текст на картинках', 'ИИ путает буквы и формулы («CO» вместо «CO₂»): просим без текста и подписываем сами.'],
-      ['🎨', 'Сложный промпт для картинки', 'Упростите промпт или отправьте его в другую нейросеть (Qwen).'],
+      ['🎨', 'Сложный промт для картинки', 'Упростите промт или отправьте его в другую нейросеть (Qwen).'],
       ['🔒', 'Персональные данные в запросе', 'Никаких имён, диагнозов, семейных обстоятельств, номера школы и города.']].map(([i, h, d]) => `<button class="flip" aria-pressed="false"><div class="in"><div class="f"><div class="ico t-coral">${i}</div><div class="card-t">${h}</div><span class="hint">Как избежать? ↻</span></div><div class="b"><div class="card-t">${h}</div><p class="card-d">${d}</p></div></div></button>`).join('')}</div>` },
 
-  { tag: 'Подарки', title: 'Ваши подарки', lead: 'Материалы вы получите отдельно после воркшопа.',
+  { tag: 'Подарки', title: 'Ваши подарки', lead: 'Материалы вы получите отдельно после мастер-класса.',
     html: () => `<div class="grid g2">
       <div class="gift" style="background:linear-gradient(150deg,var(--tint),#fff)"><span class="box">🎁</span><span class="gn">Подарок №1</span><h3>ИИ снимает непедагогическую рутину</h3>
-        <ul><li>Промпт для характеристики класса к педсовету — нейтральный тон и пять рекомендаций на месяц</li><li>Промпт для тактичного сообщения родителю</li><li>Без персональных данных: имена учитель вписывает сам</li></ul></div>
+        <ul><li>Промт для характеристики класса к педсовету — нейтральный тон и пять рекомендаций на месяц</li><li>Промт для тактичного сообщения родителю</li><li>Без персональных данных: имена учитель вписывает сам</li></ul></div>
       <div class="gift" style="background:linear-gradient(150deg,var(--bg-soft),#fff)"><span class="box">🎁</span><span class="gn">Подарок №2</span><h3>Полезные ресурсы для учителей</h3>
         <ul><li>Сервис для создания инфографики и схем на базе ИИ</li><li>Бесплатные конструкторы интерактивных тренажёров, тестов, кроссвордов и квестов</li><li>Описание и ссылки на каждый сервис</li></ul></div></div>` },
 
-  { tag: 'Финал', title: 'Какой промпт вы попробуете завтра первым?', own: true,
-    html: () => `<div class="cover"><div><div class="kicker">Рефлексия</div><h1 class="t" style="font-size:clamp(34px,4.4vw,64px)">Какой промпт вы попробуете завтра первым?</h1>
+  { tag: 'Финал', title: 'Какой промт вы попробуете завтра первым?', own: true,
+    html: () => `<div class="cover"><div><div class="kicker">Рефлексия</div><h1 class="t" style="font-size:clamp(34px,4.4vw,64px)">Какой промт вы попробуете завтра первым?</h1>
       <div class="tags">${['Технологическая карта', 'Рабочий лист', 'Проверочная', 'Дифференцированное ДЗ', 'Картинка'].map(t => `<span class="chip">${t}</span>`).join('')}</div>
       <p class="lead" style="margin-top:22px">Спасибо за работу! ИИ — ассистент, а учитель — автор урока.</p></div>
       <div class="illu">${img('cover', 'Учитель у экрана и робот-помощник')}</div></div>` }
