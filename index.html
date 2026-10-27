@@ -18,6 +18,7 @@
   --r-xl:16px; --r-lg:12px; --r-md:10px;
   --f:"Golos Text","PT Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
 }
+
 *{box-sizing:border-box}
 [hidden]{display:none!important}
 html,body{height:100%;margin:0}
@@ -190,6 +191,25 @@ p.lead{font-size:clamp(16px,1.35vw,20px);line-height:1.55;color:var(--ink-2);mar
 .gift h3{margin:0;font:800 clamp(22px,2.2vw,30px)/1.2 var(--f)}
 .gift ul{margin:0;padding-left:20px;font-size:16.5px;line-height:1.6;color:var(--ink-2)}
 .gift .box{font-size:54px}
+.gift--surprise{
+  grid-column:1 / -1;        /* занять обе колонки, а не только левую */
+  justify-self:center;       /* встать по центру строки */
+  width:min(100%, 520px);    /* ширина: 520px, на узких экранах не больше 100% */
+  align-items:center;        /* центрировать иконку и заголовок внутри */
+  text-align:center;
+  animation: pulse 2s infinite; /* запуск анимации */}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 
 /* панель */
 #bar{position:relative;z-index:5;margin:10px auto 0;width:100%;max-width:1560px;display:flex;align-items:center;gap:6px;background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);padding:8px 12px;box-shadow:var(--shadow-sm)}
@@ -735,7 +755,12 @@ const SLIDES = [
       <div class="gift" style="background:linear-gradient(150deg,var(--tint),#fff)"><span class="box">🎁</span><span class="gn">Подарок №1</span><h3>ИИ снимает непедагогическую рутину</h3>
         <ul><li>Промт для характеристики класса к педсовету — нейтральный тон и пять рекомендаций на месяц</li><li>Промт для тактичного сообщения родителю</li><li>Без персональных данных: имена учитель вписывает сам</li></ul></div>
       <div class="gift" style="background:linear-gradient(150deg,var(--bg-soft),#fff)"><span class="box">🎁</span><span class="gn">Подарок №2</span><h3>Полезные ресурсы для учителей</h3>
-        <ul><li>Сервис для создания инфографики и схем на базе ИИ</li><li>Бесплатные конструкторы интерактивных тренажёров, тестов, кроссвордов и квестов</li><li>Описание и ссылки на каждый сервис</li></ul></div></div>` },
+        <ul><li>Сервис для создания инфографики и схем на базе ИИ</li><li>Бесплатные конструкторы интерактивных тренажёров, тестов, кроссвордов и квестов</li><li>Описание и ссылки на каждый сервис</li></ul></div>
+	<a href="https://atlas.rebotica.ru/it-kompas.html" class="gift gift--surprise" style="background:linear-gradient(150deg,var(--tint),#3f4fd8); text-decoration:none; color:inherit; display:block;">
+  <span class="box">🎁</span>
+  <span class="gn"></span>
+  <h3>Подарок-сюрприз</h3>
+</a></div>` },
 
   { tag: 'Финал', title: 'Какой промт вы попробуете завтра первым?', own: true,
     html: () => `<div class="cover"><div><div class="kicker">Рефлексия</div><h1 class="t" style="font-size:clamp(34px,4.4vw,64px)">Какой промт вы попробуете завтра первым?</h1>
